@@ -1,6 +1,8 @@
 # Đồ án 2: So sánh DCO-OFDM và ACO-OFDM cho hệ thống VLC giới hạn băng thông
 
-Sinh viên: Nguyễn Minh Huyền, Khoa Điện, Điện tử, Trường Đại học Bách Khoa, ĐHQG TP.HCM.
+Sinh viên: Nguyễn Minh Huyền, MSSV 2311274, Khoa Điện, Điện tử, Trường Đại học Bách Khoa, ĐHQG TP.HCM.
+
+Repo: https://github.com/nguyenminhhuyen22062005/2311274-NguyenMinhHuyen-DA2-VLC-OFDM
 
 Chương trình mô phỏng MATLAB so sánh hai kỹ thuật OFDM quang cho truyền thông bằng ánh sáng nhìn thấy dùng điều chế cường độ và tách sóng trực tiếp: DCO-OFDM, cộng DC bias rồi xén phần âm, và ACO-OFDM, chỉ dùng sóng mang lẻ rồi xén toàn bộ phần âm. Hai hệ thống dùng chung kích thước FFT, bậc điều chế, kênh LED và cách chuẩn hóa công suất để so sánh công bằng về BER, hiệu suất phổ, PAPR, ảnh hưởng của DC bias và của băng thông LED.
 
@@ -17,8 +19,8 @@ Code gốc không chạy được trên MATLAB hiện tại và có nhiều lỗ
 - Không cần cài thêm gói nào.
 
 ```bash
-git clone https://github.com/<tai-khoan>/<ten-repo>.git
-cd <ten-repo>/dco_aco_vlc
+git clone https://github.com/nguyenminhhuyen22062005/2311274-NguyenMinhHuyen-DA2-VLC-OFDM.git
+cd 2311274-NguyenMinhHuyen-DA2-VLC-OFDM/dco_aco_vlc
 ```
 
 Nếu không có MATLAB trên máy: nén thư mục `dco_aco_vlc`, tải lên MATLAB Drive của MATLAB Online, giải nén bằng `unzip` rồi chạy như dưới. Bản MATLAB Online basic giới hạn 15 phút tính toán liên tục mỗi lần, đủ cho chế độ `quick` và `figures`.
