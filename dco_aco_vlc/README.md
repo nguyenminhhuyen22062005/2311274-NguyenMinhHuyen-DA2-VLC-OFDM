@@ -124,8 +124,8 @@ Hình 2.1 và 3.1 là sơ đồ khối, được vẽ trực tiếp trong file W
 
 ## 8. Môi trường đã chạy
 
-- Mô phỏng Monte Carlo trong `results/*.csv`: GNU Octave 8.4 trên Linux 64-bit, seed 2026.
-- Kiểm tra `quick_test.m` và vẽ toàn bộ hình: MATLAB Online R2026b, phiên bản 26.2.0.3386108.
+- Mô phỏng Monte Carlo trong `results/*.csv`, lần chạy đầu: GNU Octave 8.4 trên Linux 64-bit, seed 2026. Lần chạy này do trợ lý AI Claude thực hiện trong môi trường máy chủ của công cụ, không phải trên máy cá nhân của sinh viên.
+- Kiểm tra `quick_test.m` và vẽ toàn bộ hình: sinh viên tự chạy trên MATLAB Online R2026b, phiên bản 26.2.0.3386108.
 
 ## 9. Cấu trúc thư mục
 
@@ -140,3 +140,16 @@ dco_aco_vlc/
 ├── results/                CSV, MAT, JSON
 └── figures_matlab/         PNG
 ```
+
+## 10. Nhật ký thực hiện
+
+Đồ án được thực hiện với sự hỗ trợ của trợ lý AI Claude trong việc phân tích codebase, viết code mô phỏng, chạy thử và soạn báo cáo. Sinh viên đặt yêu cầu, chạy kiểm tra trên MATLAB, rà soát kết quả và cách diễn đạt. Code được viết và lưu trên máy từ giữa tháng 10; repo GitHub được tạo ngày 10/11/2026 theo yêu cầu nộp của giảng viên, nên các commit đầu tiên tập trung vào ngày này.
+
+| Ngày | Công việc |
+|---|---|
+| 16/10/2026 | Nhận đề tài, phân tích codebase SamuelDSR/VLC, phát hiện 9 lỗi; viết lại khung mô phỏng chung cho DCO và ACO, mô hình LED bậc một, chuẩn hóa công suất, mô hình giải tích Bussgang; chạy 5 thí nghiệm, lưu kết quả CSV; soạn báo cáo bản đầu |
+| 19/10/2026 | Viết `make_figures.m` để vẽ toàn bộ hình bằng MATLAB; bổ sung tài liệu tham khảo, mục đối chiếu với các công trình đã công bố |
+| 20/10/2026 | Sinh viên chạy `quick_test.m` và `make_figures.m` trên MATLAB Online R2026b, kết quả khớp lý thuyết; đưa hình MATLAB và ảnh minh chứng vào báo cáo |
+| 22/10/2026 | Tìm hiểu ý nghĩa các công thức, logic mô phỏng và những gì mỗi thí nghiệm chứng minh |
+| 09/11/2026 | Rà soát báo cáo: sửa cách diễn đạt PAPR, BER khi không có lỗi, phạm vi sai lệch mô phỏng và giải tích, bias tối ưu theo giải tích, SNR quang quy ước, quy ước hiệu suất phổ; vẽ lại sơ đồ khối bằng Word |
+| 10/11/2026 | Tạo repo GitHub từ fork SamuelDSR/VLC; thêm `run_all_experiments.m`, xuất kết quả ra MAT và JSON, viết README đầy đủ |
