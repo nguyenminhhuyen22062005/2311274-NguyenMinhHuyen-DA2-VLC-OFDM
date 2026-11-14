@@ -302,4 +302,25 @@ for s = 1:2
     legend([h1 h2], {'ACO-OFDM', 'DCO-OFDM (model-opt. bias)'}, 'Location', 'northwest');
 end
 fig_save(f, OUT, 'r13_snr_vs_se');
+
+% ---- Thi nghiem 6: quet bias bang mo phong quanh muc toi uu giai tich ----
+f6 = fullfile(R, 'exp6_bias_sweep.csv');
+if exist(f6, 'file')
+    T = csv_named(f6); Ms = unique(T.M).';
+    f = fig_new(7.0, 3.6);
+    for s = 1:numel(Ms)
+        subplot(1, numel(Ms), s); hold on;
+        k = T.M == Ms(s);
+        h1 = plot(T.biasdB(k), T.req_elec_th(k), '-', 'Color', GRAY, 'LineWidth', 1.4);
+        h2 = plot(T.biasdB(k), T.req_elec_sim(k), '-o', 'Color', ORANGE, 'MarkerFaceColor', ORANGE, 'LineWidth', 1.5);
+        b0 = T.biasdB(k & T.offset_from_analytic == 0);
+        [~, j] = min(T.req_elec_sim(k)); bb = T.biasdB(k); ss = T.req_elec_sim(k);
+        h3 = plot(bb(j), ss(j), 'p', 'Color', BLUE, 'MarkerFaceColor', BLUE, 'MarkerSize', 10);
+        yl = ylim; plot([b0 b0], yl, ':', 'Color', GRAY); ylim(yl);
+        fig_axes(); xlabel('DC bias (dB)'); title(sprintf('DCO %d-QAM', Ms(s)));
+        if s == 1, ylabel('Required E_{b(elec)}/N_0 (dB)'); end
+    end
+    fig_legend([h1 h2 h3], {'analytical', 'simulation', 'best (sim.)'}, 3);
+    fig_save(f, OUT, 'r14_bias_sweep');
+end
 fprintf('Xong. Hinh nam trong %s\n', OUT);

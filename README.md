@@ -35,7 +35,7 @@ Trong MATLAB, chọn `dco_aco_vlc` làm Current Folder:
 | `run_all_experiments('figures')` | Từ `results/*.csv` có sẵn: xuất MAT và JSON, vẽ lại toàn bộ 17 hình của báo cáo | khoảng 1 phút |
 | `run_all_experiments('full')` hoặc `run_all_experiments` | Chạy kiểm tra, 5 thí nghiệm, xuất MAT và JSON, vẽ hình | 40 đến 60 phút |
 
-Chạy riêng từng thí nghiệm: `exp1_ber_vs_snr`, `exp2_led_bandwidth`, `exp3_dc_bias`, `exp4_papr`, `exp5_summary`.
+Chạy riêng từng thí nghiệm: `exp1_ber_vs_snr`, `exp2_led_bandwidth`, `exp3_dc_bias`, `exp4_papr`, `exp5_summary`, `exp6_bias_sweep`.
 
 Thử một cấu hình tùy ý:
 
@@ -88,6 +88,7 @@ Phần thêm mới:
 - Mô hình LED thông thấp bậc một với tham số β.
 - Thống kê PAPR với lấy mẫu tăng L = 4: `lib/papr_db.m`, `exp4_papr.m`.
 - Năm thí nghiệm `exp1` đến `exp5`, bộ kiểm tra `quick_test.m`.
+- Thí nghiệm 6 `exp6_bias_sweep.m`: quét DC bias bằng mô phỏng Monte Carlo quanh mức tối ưu theo mô hình giải tích, từ b0 − 1 đến b0 + 2 dB bước 0,5 dB, với DCO 4, 16 và 64-QAM, để kiểm tra mức bias tốt nhất theo mô phỏng.
 - Xuất kết quả ra CSV, MAT, JSON: `lib/write_csv.m`, `lib/export_results.m`.
 - Vẽ toàn bộ hình của báo cáo bằng MATLAB: `make_figures.m`.
 - Script chạy một lệnh: `run_all_experiments.m`.
@@ -111,6 +112,7 @@ Phần thêm mới:
 | Hình 4.11, Bảng 4.4 | `exp4_papr.m` | `exp4_papr_ccdf`, `exp4_papr_stats` | `r12_papr` |
 | Hình 4.12, Bảng 4.5 | `exp5_summary.m` | `exp5_summary` | `r13_snr_vs_se` |
 | Bảng 3.6, Phụ lục B | `quick_test.m` | in ra Command Window | |
+| Thí nghiệm 6, bổ sung sau báo cáo giữa kỳ | `exp6_bias_sweep.m` | `exp6_bias_sweep` | `r14_bias_sweep` |
 
 Hình 2.1 và 3.1 là sơ đồ khối, được vẽ trực tiếp trong file Word của báo cáo.
 
@@ -155,4 +157,4 @@ Báo cáo giữa kỳ và tài liệu bổ sung dạng PDF nằm trong thư mụ
 | 22/10/2026 | Tìm hiểu ý nghĩa các công thức, logic mô phỏng và những gì mỗi thí nghiệm chứng minh |
 | 09/11/2026 | Rà soát báo cáo: sửa cách diễn đạt PAPR, BER khi không có lỗi, phạm vi sai lệch mô phỏng và giải tích, bias tối ưu theo giải tích, SNR quang quy ước, quy ước hiệu suất phổ; vẽ lại sơ đồ khối bằng Word |
 | 10/11/2026 | Tạo repo GitHub từ fork SamuelDSR/VLC; thêm `run_all_experiments.m`, xuất kết quả ra MAT và JSON, viết README đầy đủ; viết tài liệu bổ sung về nguồn gốc số liệu |
-| 14/11/2026 | Đưa báo cáo giữa kỳ và tài liệu bổ sung lên thư mục `docs/` |
+| 14/11/2026 | Đưa báo cáo giữa kỳ và tài liệu bổ sung lên thư mục `docs/`; viết thí nghiệm 6 quét DC bias bằng mô phỏng quanh mức tối ưu giải tích |
