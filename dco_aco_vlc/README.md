@@ -128,6 +128,7 @@ Hình 2.1 và 3.1 là sơ đồ khối, được vẽ trực tiếp trong file W
 
 - Mô phỏng Monte Carlo trong `results/*.csv`, lần chạy đầu: GNU Octave 8.4 trên Linux 64-bit, seed 2026. Lần chạy này do trợ lý AI Claude thực hiện trong môi trường máy chủ của công cụ, không phải trên máy cá nhân của sinh viên.
 - Kiểm tra `quick_test.m` và vẽ toàn bộ hình: sinh viên tự chạy trên MATLAB Online R2026b, phiên bản 26.2.0.3386108.
+- Thí nghiệm 6 `exp6_bias_sweep.m`: sinh viên tự chạy trên MATLAB Online R2026b ngày 14/11/2026.
 
 ## 9. Cấu trúc thư mục
 
@@ -157,4 +158,4 @@ Báo cáo giữa kỳ và tài liệu bổ sung dạng PDF nằm trong thư mụ
 | 22/10/2026 | Tìm hiểu ý nghĩa các công thức, logic mô phỏng và những gì mỗi thí nghiệm chứng minh |
 | 09/11/2026 | Rà soát báo cáo: sửa cách diễn đạt PAPR, BER khi không có lỗi, phạm vi sai lệch mô phỏng và giải tích, bias tối ưu theo giải tích, SNR quang quy ước, quy ước hiệu suất phổ; vẽ lại sơ đồ khối bằng Word |
 | 10/11/2026 | Tạo repo GitHub từ fork SamuelDSR/VLC; thêm `run_all_experiments.m`, xuất kết quả ra MAT và JSON, viết README đầy đủ; viết tài liệu bổ sung về nguồn gốc số liệu |
-| 14/11/2026 | Đưa báo cáo giữa kỳ và tài liệu bổ sung lên thư mục `docs/`; viết thí nghiệm 6 quét DC bias bằng mô phỏng quanh mức tối ưu giải tích |
+| 14/11/2026 | Đưa báo cáo giữa kỳ và tài liệu bổ sung lên thư mục `docs/`; viết thí nghiệm 6 quét DC bias bằng mô phỏng quanh mức tối ưu giải tích; sinh viên chạy thí nghiệm 6 và vẽ lại toàn bộ hình trên MATLAB Online R2026b, ảnh chụp màn hình lưu ở `docs/minh_chung` |
