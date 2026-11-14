@@ -141,6 +141,8 @@ dco_aco_vlc/
 └── figures_matlab/         PNG
 ```
 
+Báo cáo giữa kỳ và tài liệu bổ sung dạng PDF nằm trong thư mục `docs/` ở thư mục gốc của repo.
+
 ## 10. Nhật ký thực hiện
 
 Đồ án được thực hiện với sự hỗ trợ của trợ lý AI Claude trong việc phân tích codebase, viết code mô phỏng, chạy thử và soạn báo cáo. Sinh viên đặt yêu cầu, chạy kiểm tra trên MATLAB, rà soát kết quả và cách diễn đạt. Code được viết và lưu trên máy từ giữa tháng 10; repo GitHub được tạo ngày 10/11/2026 theo yêu cầu nộp của giảng viên, nên các commit đầu tiên tập trung vào ngày này.
@@ -152,4 +154,5 @@ dco_aco_vlc/
 | 20/10/2026 | Sinh viên chạy `quick_test.m` và `make_figures.m` trên MATLAB Online R2026b, kết quả khớp lý thuyết; đưa hình MATLAB và ảnh minh chứng vào báo cáo |
 | 22/10/2026 | Tìm hiểu ý nghĩa các công thức, logic mô phỏng và những gì mỗi thí nghiệm chứng minh |
 | 09/11/2026 | Rà soát báo cáo: sửa cách diễn đạt PAPR, BER khi không có lỗi, phạm vi sai lệch mô phỏng và giải tích, bias tối ưu theo giải tích, SNR quang quy ước, quy ước hiệu suất phổ; vẽ lại sơ đồ khối bằng Word |
-| 10/11/2026 | Tạo repo GitHub từ fork SamuelDSR/VLC; thêm `run_all_experiments.m`, xuất kết quả ra MAT và JSON, viết README đầy đủ |
+| 10/11/2026 | Tạo repo GitHub từ fork SamuelDSR/VLC; thêm `run_all_experiments.m`, xuất kết quả ra MAT và JSON, viết README đầy đủ; viết tài liệu bổ sung về nguồn gốc số liệu |
+| 14/11/2026 | Đưa báo cáo giữa kỳ phiên bản 6 và tài liệu bổ sung lên thư mục `docs/` |
