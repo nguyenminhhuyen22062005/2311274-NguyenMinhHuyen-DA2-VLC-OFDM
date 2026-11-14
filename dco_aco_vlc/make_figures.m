@@ -320,7 +320,7 @@ if exist(f6, 'file')
         fig_axes(); xlabel('DC bias (dB)'); title(sprintf('DCO %d-QAM', Ms(s)));
         if s == 1, ylabel('Required E_{b(elec)}/N_0 (dB)'); end
     end
-    fig_legend([h1 h2 h3], {'analytical', 'simulation', 'best (sim.)'}, 3);
+    lg = legend([h1 h2 h3], {'analytical', 'simulation', 'best (sim.)'}, 'Location', 'northeast'); set(lg, 'FontSize', 8);
     fig_save(f, OUT, 'r14_bias_sweep');
 end
 fprintf('Xong. Hinh nam trong %s\n', OUT);
